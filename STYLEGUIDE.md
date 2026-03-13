@@ -1,19 +1,16 @@
-# Style Guide
+# Style Guide — World Airport Codes
 
 ## 设计参考
-- [参考网站1 URL] — 借鉴要素（配色/布局/卡片/字体/间距）
-- [参考网站2 URL] — 借鉴要素
-
-## DaisyUI Theme
-`data-theme="DAISY_THEME"` — 在 layout.tsx 中设置
+- airportcodes.io — Clean search-first UX, IATA code prominently displayed in cards
+- flightradar24.com — Aviation dark theme, map-centric layout, data-dense cards
+- skyscanner.com — Travel search UX, clean cards with key info at a glance
 
 ## 配色方案
-- Primary: #2563eb (修改 globals.css @theme)
-- Secondary: #7c3aed
-- Accent: #f59e0b
+DaisyUI theme: night (dark aviation blue, professional)
 
 ## 设计决策
-- [ ] 卡片风格：
-- [ ] 布局模式：
-- [ ] 字体层级：
-- [ ] 间距规范：
+- Search-first homepage: large search bar for IATA/city/country lookup
+- Airport cards: IATA code large + bold, city/country secondary, map pin icon
+- Country index: grid of country cards with airport count badges
+- Per-airport pages: hero with code + name, Leaflet map, nearby airports, key facts
+- Clean typography, generous spacing, aviation-inspired icons (✈️)

@@ -3,20 +3,20 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "SITE_TITLE",
-    template: "%s | SITE_TITLE",
+    default: "World Airport Codes — IATA & ICAO Directory",
+    template: "%s | World Airport Codes",
   },
-  description: "SITE_DESCRIPTION",
+  description: "Search 6,000+ airports worldwide by IATA code, city, or country. Free airport code directory with maps, locations, and details.",
   openGraph: {
-    title: "SITE_TITLE",
-    description: "SITE_DESCRIPTION",
-    url: "https://SUBDOMAIN.rollersoft.com.au",
-    siteName: "SITE_TITLE",
+    title: "World Airport Codes — IATA & ICAO Directory",
+    description: "Search 6,000+ airports worldwide by IATA code, city, or country.",
+    url: "https://airports.rollersoft.com.au",
+    siteName: "World Airport Codes",
     locale: "en_AU",
     type: "website",
   },
   alternates: {
-    canonical: "https://SUBDOMAIN.rollersoft.com.au",
+    canonical: "https://airports.rollersoft.com.au",
   },
   robots: {
     index: true,
@@ -28,18 +28,27 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="DAISY_THEME">
+    <html lang="en" data-theme="night">
       <body className="min-h-screen bg-base-100 flex flex-col">
-        <header className="navbar bg-primary text-primary-content shadow-lg">
-          <div className="container mx-auto px-4">
-            <a className="text-xl font-bold" href="/">SITE_TITLE</a>
+        <header className="navbar bg-base-200 border-b border-base-300">
+          <div className="container mx-auto px-4 flex items-center justify-between">
+            <a className="text-xl font-bold flex items-center gap-2" href="/">
+              <span className="text-2xl">✈️</span>
+              <span>Airport Codes</span>
+            </a>
+            <nav className="flex gap-4 text-sm">
+              <a href="/" className="hover:text-primary transition">Home</a>
+              <a href="/countries" className="hover:text-primary transition">Countries</a>
+              <a href="/search" className="hover:text-primary transition">Search</a>
+            </nav>
           </div>
         </header>
-        <main className="container mx-auto px-4 py-8 flex-1">
+        <main className="flex-1">
           {children}
         </main>
-        <footer className="footer footer-center p-6 bg-base-200 text-base-content">
-          <p>© {new Date().getFullYear()} SITE_TITLE. Data sourced from public records.</p>
+        <footer className="footer footer-center p-6 bg-base-200 text-base-content border-t border-base-300">
+          <p>© {new Date().getFullYear()} World Airport Codes. Data from <a href="https://openflights.org/data" className="link link-primary" target="_blank">OpenFlights</a> (public domain).</p>
+          <p className="text-xs opacity-60">A <a href="https://rollersoft.com.au" className="link" target="_blank">Rollersoft</a> project</p>
         </footer>
       </body>
     </html>
